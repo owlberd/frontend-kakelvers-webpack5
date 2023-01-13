@@ -15,4 +15,4 @@ jobs:
         run: |
           echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "uganad" --password-stdin
           docker image build -t owlberd/frontend-kakelvers-webpack5 .
-          docker push uganad/kakelvers:tagname
+          docker push uganad/kakelvers:latest
