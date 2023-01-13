@@ -7,11 +7,8 @@ on:
     branches: [ "Main" ]
 
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: mr-smithers-excellent/docker-build-push@v4
     - name: Build the Docker image and push
