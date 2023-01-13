@@ -10,10 +10,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: mr-smithers-excellent/docker-build-push@v4
-      - name: Build push docker image
-        with: 
-          image: uganad/kakelvers
-          registry: docker.io
-          username: ${{ secrets.DOCKER_USERNAME}}
-          password: ${{ secrests.DOCKER_PASSWORD}}
+     - name: Build push docker image
+       uses: mr-smithers-excellent/docker-build-push@v4
+       with: 
+         image: uganad/kakelvers
+         registry: docker.io
+         username: ${{ secrets.DOCKER_USERNAME}}
+         password: ${{ secrests.DOCKER_PASSWORD}}
