@@ -14,5 +14,5 @@ jobs:
       - name: Build push docker image
         run: |
           echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "uganad" --password-stdin
-          docker image build -t frontend-kakelvers-webpack5
-          docker push uganad/kakelvers:latest
+          docker image build -t push uganad/kakelvers:latest
+          docker push uganad/kakelvers:tagname
