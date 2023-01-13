@@ -1,0 +1,19 @@
+name: frontend kakelvers
+
+on:
+  push:
+    branches: [ "Main" ]
+  pull_request:
+    branches: [ "Main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+      working-directory: ./kakelvers/
+      run: |
+        echo "${{ secrets.dockerPW }}" | docker login -u "Uganad" --password-stdin "GFYsUxMTkKQgT3K"
+        docker image build -t frontend-kakelvers-webpack5
+        docker push Uganad/kakelvers
