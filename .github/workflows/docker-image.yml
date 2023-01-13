@@ -10,9 +10,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v1
       - name: Build push docker image
         run: |
           echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "uganad" --password-stdin
-          docker image build -t uganad/kakelvers .
-          docker push uganad/kakelvers:tagname
+          docker image build -t uganad/kakelvers.
+          docker push uganad/kakelvers
