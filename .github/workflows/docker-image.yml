@@ -16,4 +16,4 @@ jobs:
       run: |
         echo "${{ secrets.dockerPW }}" | docker login -u "Uganad" --password-stdin "GFYsUxMTkKQgT3K"
         docker image build -t frontend-kakelvers-webpack5
-        docker push Uganad/frontend-kakelvers-webpack5
+        docker push Uganad/kakelvers
