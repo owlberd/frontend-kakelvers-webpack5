@@ -1,11 +1,11 @@
 version: "3.8"
 services:
-  frontend-kakelvers-webpack5:
-    build: ./frontend-kakelvers-webpack5
+  app:
     container_name: kakelverswebpack5
+    image: frontend-kakelvers-webpack5 
+    build: 
+      context: .
     ports:
       - "3000:3000"
-    volumes:
-      - ./frontend-kakelvers-webpack5/app
-      - ./frontend-kakelvers-webpack5/node_modules
+    
   
