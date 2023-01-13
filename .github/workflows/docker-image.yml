@@ -12,8 +12,8 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      working-directory: ./kakelvers\frontend-kakelvers-webpack5
+      working-directory: ./kakelvers/frontend-kakelvers-webpack5
       run: |
         echo "${{ secrets.dockerPW }}" | docker login -u "Uganad" --password-stdin "GFYsUxMTkKQgT3K"
-        docker image build -t Uganadfrontend-kakelvers-webpack5
+        docker image build -t frontend-kakelvers-webpack5
         docker push Uganad/frontend-kakelvers-webpack5
