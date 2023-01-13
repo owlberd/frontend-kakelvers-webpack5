@@ -51,7 +51,8 @@ export default function Registreren() {
                     <label>wachtwoord: </label>
                     <input type="text" placeholder="wachtwoord"></input><input type="text" placeholder="wachtwoord bevestigen"></input><br></br>
                 <input type="submit" value="Aanmaken"></input> 
-            </form>           
+            </form> 
+                     
         </div>
     </center>  
   )
