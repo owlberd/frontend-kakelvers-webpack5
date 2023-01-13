@@ -16,4 +16,4 @@ jobs:
          image: uganad/kakelvers
          registry: docker.io
          username: ${{ secrets.DOCKER_USERNAME}}
-         password: ${{ secrests.DOCKER_PASSWORD}}
+         password: ${{ secrets.DOCKER_PASSWORD}}
