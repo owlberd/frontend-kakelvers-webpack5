@@ -10,10 +10,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v1
       - name: Build push docker image
         run: |
           echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "uganad" --password-stdin
-          docker image build -t frontend-kakelvers-webpack5 .
-          docker tag bb38976d03cf frontend-kakelvers-webpack5:firsttry
-          docker push uganad/kakelvers:latest
+          docker image build -t uganad/kakelvers .
+          docker push uganad/kakelvers
