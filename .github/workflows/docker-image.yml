@@ -7,13 +7,12 @@ on:
     branches: [ "Main" ]
 
 jobs:
-  build: 
+  build:
     runs-on: ubuntu-latest
     steps:
-    - name: Build the Docker image and push
-      uses: mr-smithers-excellent/docker-build-push@v4
-      with: 
-        image: uganad/kakelvers
-        registry: docker.io
-        username: ${{ secrets.DOCKER_USERNAME }}
-        password: ${{ secrets.DOCKER_PASSWORD }}
+      - uses: actions/checkout@v1
+      - name: Build/push docker image
+        run: |
+          echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "uganad" --password-stdin
+          docker image build -t owlberd/frontend-kakelvers-webpack5 .
+          docker push uganad/kakelvers
